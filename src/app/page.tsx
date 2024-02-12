@@ -34,7 +34,7 @@ export default async function Home() {
             <RegisterLink>
               <Button
                 size='lg'
-                className='w-full'
+                className='w-full cursor-pointer'
               >
                 Sign Up for free
               </Button>

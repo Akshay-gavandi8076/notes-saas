@@ -19,6 +19,7 @@ export function ThemeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
+          className='cursor-pointer'
           variant='outline'
           size='icon'
         >

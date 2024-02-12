@@ -64,7 +64,10 @@ export default async function DashboardPage() {
             Here you can see and create new notes
           </p>
         </div>
-        <Button asChild>
+        <Button
+          className='cursor-pointer'
+          asChild
+        >
           <Link href='/dashboard/new'>Create a new Notes</Link>
         </Button>
         {/* TODO: This code for billing
@@ -96,7 +99,10 @@ export default async function DashboardPage() {
             you can see them right here.
           </p>
 
-          <Button asChild>
+          <Button
+            className='cursor-pointer'
+            asChild
+          >
             <Link href='/dashboard/new'>Create a new Notes</Link>
           </Button>
 
@@ -135,6 +141,7 @@ export default async function DashboardPage() {
               <div className='flex gap-x-4'>
                 <Link href={`/dashboard/new/${item.id}`}>
                   <Button
+                    className='cursor-pointer'
                     variant='outline'
                     size='icon'
                   >

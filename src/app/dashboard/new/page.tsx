@@ -72,6 +72,7 @@ export default async function NewNoteRoute() {
 
         <CardFooter className='flex justify-between'>
           <Button
+            className='cursor-pointer'
             asChild
             variant='destructive'
           >

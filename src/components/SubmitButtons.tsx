@@ -12,13 +12,13 @@ export function SubmitButton() {
       {pending ? (
         <Button
           disabled
-          className='w-fit'
+          className='w-fit cursor-pointer'
         >
           <Loader2 className='mr-2 w-4 animate-spin' /> Please wait
         </Button>
       ) : (
         <Button
-          className='w-fit'
+          className='w-fit cursor-pointer'
           type='submit'
         >
           Save Now
@@ -36,13 +36,13 @@ export function StripeSubscriptionCreationButton() {
       {pending ? (
         <Button
           disabled
-          className='w-full'
+          className='w-full cursor-pointer'
         >
           <Loader2 className='mr-2 w-4 animate-spin' /> Please wait
         </Button>
       ) : (
         <Button
-          className='w-full'
+          className='w-full cursor-pointer'
           type='submit'
         >
           Create Subscription
@@ -60,13 +60,13 @@ export function StripePortal() {
       {pending ? (
         <Button
           disabled
-          className='w-fit'
+          className='w-fit cursor-pointer'
         >
           <Loader2 className='mr-2 w-4 animate-spin' /> Please wait
         </Button>
       ) : (
         <Button
-          className='w-fit'
+          className='w-fit cursor-pointer'
           type='submit'
         >
           View payment details
@@ -83,6 +83,7 @@ export function TrashDelete() {
     <>
       {pending ? (
         <Button
+          className='cursor-pointer'
           variant={'destructive'}
           size='icon'
           disabled
@@ -91,6 +92,7 @@ export function TrashDelete() {
         </Button>
       ) : (
         <Button
+          className='cursor-pointer'
           variant={'destructive'}
           size='icon'
           type='submit'

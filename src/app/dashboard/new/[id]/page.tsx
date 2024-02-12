@@ -101,6 +101,7 @@ export default async function DynamicRoute({
 
         <CardFooter className='flex justify-between'>
           <Button
+            className='cursor-pointer'
             asChild
             variant='destructive'
           >

@@ -37,11 +37,16 @@ export async function Navbar() {
             // </LogoutLink>
             <div className='flex items-center gap-x-5'>
               <LoginLink>
-                <Button>Sign In</Button>
+                <Button className='cursor-pointer'>Sign In</Button>
               </LoginLink>
 
               <RegisterLink>
-                <Button variant='secondary'>Sign Up</Button>
+                <Button
+                  className='cursor-pointer'
+                  variant='secondary'
+                >
+                  Sign Up
+                </Button>
               </RegisterLink>
             </div>
           )}
