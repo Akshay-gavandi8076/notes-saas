@@ -25,8 +25,7 @@ export default async function Home() {
               Create Notes with ease
             </h1>
             <p className='max-w-xl mx-auto mt-8 text-base lg:text-xl text-secondary-foreground'>
-              Lorem ipsum dolor sit amet. Eum enim ipsa qui autem dolores aut
-              adipisci ipsum ex sunt accusamus qui fugiat laboriosam.
+              Our mission is to simplify the way you create and manage notes.
             </p>
           </div>
 
