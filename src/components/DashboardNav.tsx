@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { navItems } from './UserNav'
 
-export function DashboardNav() {
+export const DashboardNav = () => {
   const pathname = usePathname()
   console.log(pathname)
   return (

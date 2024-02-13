@@ -6,7 +6,7 @@ import prisma from '@/lib/db'
 import { stripe } from '@/lib/stripe'
 import { unstable_noStore as noStore } from 'next/cache'
 
-async function getData({
+const getData = async ({
   email,
   id,
   firstName,
@@ -18,7 +18,7 @@ async function getData({
   firstName: string | undefined | null
   lastName: string | undefined | null
   profileImage: string | undefined | null
-}) {
+}) => {
   noStore()
   const user = await prisma.user.findUnique({
     where: {
@@ -57,11 +57,7 @@ async function getData({
   }
 }
 
-export default async function DashboardLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
+const DashboardLayout = async ({ children }: { children: ReactNode }) => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
 
@@ -89,3 +85,5 @@ export default async function DashboardLayout({
     </div>
   )
 }
+
+export default DashboardLayout

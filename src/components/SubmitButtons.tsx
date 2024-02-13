@@ -4,7 +4,7 @@ import { useFormStatus } from 'react-dom'
 import { Button } from './ui/button'
 import { Loader2, Trash } from 'lucide-react'
 
-export function SubmitButton() {
+export const SubmitButton = () => {
   const { pending } = useFormStatus()
 
   return (
@@ -28,7 +28,7 @@ export function SubmitButton() {
   )
 }
 
-export function StripeSubscriptionCreationButton() {
+export const StripeSubscriptionCreationButton = () => {
   const { pending } = useFormStatus()
 
   return (
@@ -52,7 +52,7 @@ export function StripeSubscriptionCreationButton() {
   )
 }
 
-export function StripePortal() {
+export const StripePortal = () => {
   const { pending } = useFormStatus()
 
   return (
@@ -76,7 +76,7 @@ export function StripePortal() {
   )
 }
 
-export function TrashDelete() {
+export const TrashDelete = () => {
   const { pending } = useFormStatus()
 
   return (

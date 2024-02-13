@@ -19,7 +19,7 @@ export const navItems = [
   { name: 'Billing', href: '/dashboard/billing', icon: CreditCard },
 ]
 
-export function UserNav({
+export const UserNav = ({
   name,
   email,
   image,
@@ -27,7 +27,7 @@ export function UserNav({
   name: string
   email: string
   image: string
-}) {
+}) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

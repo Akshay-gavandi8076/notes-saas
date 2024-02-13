@@ -3,7 +3,7 @@ import { headers } from 'next/headers'
 import Stripe from 'stripe'
 import prisma from '@/lib/db'
 
-export async function POST(req: Request) {
+export const POST = async (req: Request) => {
   const body = await req.text()
 
   const signature = headers().get('Stripe-Signature') as string

@@ -7,7 +7,7 @@ import { Card } from '@/components/ui/card'
 import { revalidatePath, unstable_noStore as noStore } from 'next/cache'
 import { TrashDelete } from '@/components/SubmitButtons'
 
-async function getData(userId: string) {
+const getData = async (userId: string) => {
   noStore()
   const data = await prisma.note.findMany({
     where: {
@@ -36,12 +36,12 @@ async function getData(userId: string) {
   return data
 }
 
-export default async function DashboardPage() {
+const DashboardPage = async () => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
   const data = await getData(user?.id as string)
 
-  async function deleteNote(formData: FormData) {
+  const deleteNote = async (formData: FormData) => {
     'use server'
 
     const noteId = formData.get('noteId') as string
@@ -164,3 +164,5 @@ export default async function DashboardPage() {
     </div>
   )
 }
+
+export default DashboardPage

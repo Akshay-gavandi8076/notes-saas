@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card'
 import { XIcon } from 'lucide-react'
 import Link from 'next/link'
 
-export default function CancelledRoute() {
+const CancelledRoute = () => {
   return (
     <div className='w-full min-h-[80vh] flex items-center justify-center'>
       <Card className='w-[350px]'>
@@ -34,3 +34,5 @@ export default function CancelledRoute() {
     </div>
   )
 }
+
+export default CancelledRoute

@@ -17,7 +17,13 @@ import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { redirect } from 'next/navigation'
 import { revalidatePath, unstable_noStore as noStore } from 'next/cache'
 
-async function getData({ userId, noteId }: { userId: string; noteId: string }) {
+const getData = async ({
+  userId,
+  noteId,
+}: {
+  userId: string
+  noteId: string
+}) => {
   noStore()
   const data = await prisma.note.findUnique({
     where: {
@@ -34,16 +40,12 @@ async function getData({ userId, noteId }: { userId: string; noteId: string }) {
   return data
 }
 
-export default async function DynamicRoute({
-  params,
-}: {
-  params: { id: string }
-}) {
+const DynamicRoute = async ({ params }: { params: { id: string } }) => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
   const data = await getData({ userId: user?.id as string, noteId: params.id })
 
-  async function postData(formData: FormData) {
+  const postData = async (formData: FormData) => {
     'use server'
 
     if (!user) throw new Error('you are not allowed')
@@ -113,3 +115,5 @@ export default async function DynamicRoute({
     </Card>
   )
 }
+
+export default DynamicRoute

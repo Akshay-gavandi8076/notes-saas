@@ -24,7 +24,7 @@ const featureItems = [
   { name: 'Lorem Ipsum something' },
 ]
 
-async function getData(userId: string) {
+const getData = async (userId: string) => {
   noStore()
   const data = await prisma.subscription.findUnique({
     where: {
@@ -43,12 +43,12 @@ async function getData(userId: string) {
   return data
 }
 
-export default async function BillingPage() {
+const BillingPage = async () => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
   const data = await getData(user?.id as string)
 
-  async function createSubscription() {
+  const createSubscription = async () => {
     'use server'
 
     const dbUser = await prisma.user.findUnique({
@@ -76,7 +76,7 @@ export default async function BillingPage() {
     return redirect(subscriptionUrl)
   }
 
-  async function createcustomerPortal() {
+  const createcustomerPortal = async () => {
     'use server'
 
     const session = await stripe.billingPortal.sessions.create({
@@ -163,3 +163,5 @@ export default async function BillingPage() {
     </div>
   )
 }
+
+export default BillingPage

@@ -23,7 +23,7 @@ import prisma from '@/lib/db'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { revalidatePath, unstable_noStore as noStore } from 'next/cache'
 
-async function getData(userId: string) {
+const getData = async (userId: string) => {
   noStore()
   const data = await prisma.user.findUnique({
     where: {
@@ -39,12 +39,12 @@ async function getData(userId: string) {
   return data
 }
 
-export default async function SettingPage() {
+const SettingPage = async () => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
   const data = await getData(user?.id as string)
 
-  async function postData(formatData: FormData) {
+  const postData = async (formatData: FormData) => {
     'use server'
 
     const name = formatData.get('name') as string
@@ -139,3 +139,5 @@ export default async function SettingPage() {
     </div>
   )
 }
+
+export default SettingPage
