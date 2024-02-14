@@ -7,7 +7,7 @@ import { navItems } from './UserNav'
 
 export const DashboardNav = () => {
   const pathname = usePathname()
-  console.log(pathname)
+
   return (
     <nav className='grid items-start gap-2'>
       {navItems.map((item, index) => (

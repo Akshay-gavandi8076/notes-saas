@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import prisma from '@/lib/db'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
-import { Edit, File, Trash } from 'lucide-react'
+import { Eye, File } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { revalidatePath, unstable_noStore as noStore } from 'next/cache'
 import { TrashDelete } from '@/components/SubmitButtons'
@@ -145,7 +145,7 @@ const DashboardPage = async () => {
                     variant='outline'
                     size='icon'
                   >
-                    <Edit className='w-4 h-4' />
+                    <Eye className='w-4 h-4' />
                   </Button>
                 </Link>
                 <form action={deleteNote}>
