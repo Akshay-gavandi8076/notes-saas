@@ -58,9 +58,9 @@ Provide instructions on how to use and run the project.
 
 Include screenshots of your application to give users a visual preview.
 
-![Screenshot 1](images/landingpage.png)
-![Screenshot 1](images/dashboardHome.png)
-![Screenshot 1](images/dashboardSetting.png)
+![Screenshot 1](/public/images/landingpage.png)
+![Screenshot 1](/public/images/dashboardHome.png)
+![Screenshot 1](/public/images/dashboardSetting.png)
 
 <!-- Add more screenshots here as needed -->
 <!-- ![Screenshot 2](images/screenshot2.png) -->
