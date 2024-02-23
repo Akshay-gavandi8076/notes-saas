@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Notes SaaS Next.js App] (https://notes-saas-pi.vercel.app)
 
-## Getting Started
+This project is a Next.js application for managing notes with features such as authentication, database storage, and subscription handling.
 
-First, run the development server:
+## Table of Contents
+
+- [Resources Used](#resources-used)
+- [Features](#features)
+- [Pending States](#pending-states)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+
+## Resources Used
+
+This section lists the external resources and technologies used in the project.
+
+- [Next.js](https://nextjs.org): React framework for building web applications.
+- [Kinde](https://dub.sh/xeU8r3v): Authentication service for passwordless authentication.
+- [Tailwind.css](https://tailwindcss.com): Utility-first CSS framework.
+- [Shadcn/UI](https://ui.shadcn.com): UI components for enhancing the user interface.
+- [Stripe](https://stripe.com): Payment processing for subscription handling.
+- [Prisma](https://prisma.io): Database toolkit for accessing databases.
+- [Supabase](https://supabase.com): PostgreSQL database hosting and management.
+
+## Features
+
+This section outlines the key features of the project.
+
+- 🌐 Next.js App Router
+- 🔐 Kinde Authentication
+- 📧 Passwordless Auth
+- 🔑 OAuth (Google and GitHub)
+- 💿 Supabase Database
+- 💨 Prisma ORM
+- 🎨 Styling with Tailwind.css and Shadcn UI
+- ✅ Change the color scheme to your liking
+- 💵 Stripe for subscription handling
+- 🪝 Implementation of Stripe Webhooks
+- 😶‍🌫️ Deployment to Vercel
+
+## Pending States
+
+List of features or improvements that are yet to be implemented:
+
+- Cache Revalidation
+- Stripe Customer Portal
+- Stripe Checkout page
+- Server-side implementation
+- Add Notes, View Notes, Edit Notes, Delete Notes
+
+## Usage
+
+Provide instructions on how to use and run the project.
+
+## Screenshots
+
+Include screenshots of your application to give users a visual preview.
+
+![Screenshot 1](images/landingpage.png)
+![Screenshot 1](images/dashboardHome.png)
+![Screenshot 1](images/dashboardSetting.png)
+
+<!-- Add more screenshots here as needed -->
+<!-- ![Screenshot 2](images/screenshot2.png) -->
+
+## Installation
+
+This section provides steps to set up the project locally.
+
+1. Clone the repository: `https://github.com/Akshay-gavandi8076/notes-saas.git`
+2. Navigate to the project directory: `cd your-project-directory`
+3. Install dependencies:
+
+   Using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+Or using npm:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses several environment variables for configuration. Create a `.env` file in the root of your project and add the following variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```dotenv
+# Kinde Authentication Configuration
+KINDE_CLIENT_ID=
+KINDE_CLIENT_SECRET=
+KINDE_ISSUER_URL=
 
-## Learn More
+KINDE_SITE_URL=
+KINDE_POST_LOGOUT_REDIRECT_URL=
+KINDE_POST_LOGIN_REDIRECT_URL=
 
-To learn more about Next.js, take a look at the following resources:
+# Supabase Database Configuration
+DATABASE_URL=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Direct URL (if needed)
+DIRECT_URL=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Stripe Configuration
+STRIPE_SECRET_KEY=
+STRIPE_PRICE_ID=
+STRIPE_WEBHOOK_SECRET=‚
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Production URL (if applicable)
+PRODUCTION_URL=https://notes-saas-pi.vercel.app
+```
