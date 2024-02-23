@@ -1,4 +1,4 @@
-# [Notes SaaS Next.js App] (https://notes-saas-pi.vercel.app)
+# [Notes SaaS Next.js App](https://notes-saas-pi.vercel.app)
 
 This project is a Next.js application for managing notes with features such as authentication, database storage, and subscription handling.
 
