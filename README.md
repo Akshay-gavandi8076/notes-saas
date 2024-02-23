@@ -79,11 +79,11 @@ This section provides steps to set up the project locally.
    yarn install
    ```
 
-Or using npm:
+   Or using npm:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 ## Environment Variables
 
