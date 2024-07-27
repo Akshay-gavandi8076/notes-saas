@@ -46,8 +46,6 @@ List of features or improvements that are yet to be implemented:
 - Cache Revalidation
 - Stripe Customer Portal
 - Stripe Checkout page
-- Server-side implementation
-- Add Notes, View Notes, Edit Notes, Delete Notes
 
 ## Screenshots
 
