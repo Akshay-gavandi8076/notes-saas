@@ -7,7 +7,6 @@ This project is a Next.js application for managing notes with features such as a
 - [Resources Used](#resources-used)
 - [Features](#features)
 - [Pending States](#pending-states)
-- [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
@@ -49,10 +48,6 @@ List of features or improvements that are yet to be implemented:
 - Stripe Checkout page
 - Server-side implementation
 - Add Notes, View Notes, Edit Notes, Delete Notes
-
-## Usage
-
-Provide instructions on how to use and run the project.
 
 ## Screenshots
 
